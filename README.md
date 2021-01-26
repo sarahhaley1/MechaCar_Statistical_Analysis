@@ -1,2 +1,2 @@
 # MechaCar_Statistical_Analysis
-R 
+R - dyplr, tidyverse

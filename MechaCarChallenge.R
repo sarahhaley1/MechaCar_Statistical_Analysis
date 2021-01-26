@@ -31,3 +31,36 @@ lot_summary <- SuspensionCoil %>% group_by(Manufacturing_Lot) %>%
 lot_summary
 
 
+## Performing T-tests
+library(stats) # the stats library holds the t.test() function
+
+# Determine if the PSI across all manufacturing lots is statistically different
+# from the population mean of 1500 pounds per square inch.
+
+# compare the means across PSI with 1500
+
+across_PSI <- t.test(SuspensionCoil$PSI, mu=1500)
+across_PSI
+
+# find if each manufacturing lot is statistically different from the population mean of 1500 
+# pounds per square inch
+
+# t.test() for group in lot 1 
+lot_1 <- t.test(subset(SuspensionCoil, Manufacturing_Lot=="Lot1")$PSI,mu=1500)
+lot_1
+
+# t.test() for group in lot 2
+lot_2 <- t.test(subset(SuspensionCoil, Manufacturing_Lot=="Lot2")$PSI,mu=1500)
+lot_2
+
+# t.test() for group in lot 3
+lot_3 <- t.test(subset(SuspensionCoil, Manufacturing_Lot=="Lot3")$PSI,mu=1500)
+lot_3
+
+
+
+
+
+
+
+

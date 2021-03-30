@@ -1,4 +1,4 @@
-# MechaCar_Statistical_Analysis
+# MechaCar Analysis
 R - dyplr, tidyverse
 
 ## Linear Regression to Predict MPG 
